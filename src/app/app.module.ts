@@ -2,14 +2,37 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { BuscarGrifoComponent } from './components/buscar-grifo/buscar-grifo.component';
+import { ReportarProblemaComponent } from './components/reportar-problema/reportar-problema.component';
+import { GrifosComponent } from './components/grifos/grifos.component';
+import { FAQComponent } from './components/faq/faq.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {RouterLink, RouterOutlet} from "@angular/router";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PerfilComponent,
+    BuscarGrifoComponent,
+    ReportarProblemaComponent,
+    GrifosComponent,
+    FAQComponent,
+    PageNotFoundComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        RouterLink,
+        RouterOutlet,
+        MatButtonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
