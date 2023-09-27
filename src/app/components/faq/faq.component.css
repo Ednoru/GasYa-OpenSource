@@ -1,0 +1,22 @@
+.pregunta {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #d6eed4;
+}
+
+.pregunta-titulo {
+  margin-top: 0;
+  padding: 10px;
+  background-color: #7ce9bf;
+  cursor: pointer;
+  border-bottom: 1px solid #082269;
+}
+
+.pregunta-contenido p {
+  margin: 0;
+}
+
+.preguntas-frecuentes {
+  padding: 20px;
+}

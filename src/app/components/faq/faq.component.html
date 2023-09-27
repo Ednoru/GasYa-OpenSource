@@ -1,1 +1,10 @@
-<p>faq works!</p>
+<div class="preguntas-frecuentes">
+  <h1 class="titulogrifo">Preguntas frecuentes</h1>
+  <div *ngFor="let pregunta of preguntas; let i = index" class="pregunta">
+    <h3 (click)="toggleRespuesta(i)" class="pregunta-titulo">{{ pregunta.texto }}</h3>
+    <div class="pregunta-contenido" [hidden]="!pregunta.mostrarRespuesta">
+      <p>{{ pregunta.respuesta }}</p>
+    </div>
+    <button (click)="toggleRespuesta(i)" *ngIf="!pregunta.mostrarRespuesta">Ver más</button>
+  </div>
+</div>

@@ -6,7 +6,7 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { BuscarGrifoComponent } from './components/buscar-grifo/buscar-grifo.component';
 import { ReportarProblemaComponent } from './components/reportar-problema/reportar-problema.component';
 import { GrifosComponent } from './components/grifos/grifos.component';
-import { FAQComponent } from './components/faq/faq.component';
+import { FaqComponent } from './components/faq/faq.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {AppRoutingModule} from "./app-routing.module";
 
@@ -25,7 +25,7 @@ import {MatIconModule} from "@angular/material/icon";
     BuscarGrifoComponent,
     ReportarProblemaComponent,
     GrifosComponent,
-    FAQComponent,
+    FaqComponent,
     PageNotFoundComponent
   ],
   imports: [
