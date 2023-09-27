@@ -1,1 +1,54 @@
-<p>perfil works!</p>
+<div class="profile-section">
+    <div class="profile-info">
+      <img src="../assets/perfil.jpg" alt="Imagen de perfil" class="profile-image">
+
+      <div class="user-details">
+        <h2><strong>SEBASTIAN CÓRDOVA VALDIVIA</strong></h2>
+        <p>sebascordoba123@gmail.com</p>
+      </div>
+      <hr class="divider-line">
+    </div>
+    <div class="profile-links">
+      <div class="profile-link">
+        <i class="fas fa-user"></i>
+        <button (click)="showProfilePopup()"><strong>Mi cuenta</strong></button>
+      </div>
+      <div class="profile-link">
+        <i class="fas fa-lock"></i>
+        <span><strong>Acceso y seguridad</strong></span>
+      </div>
+      <div class="profile-link">
+        <i class="fas fa-cog"></i>
+        <span><strong>Configuración</strong></span>
+      </div>
+      <div class="profile-link">
+        <i class="fas fa-credit-card"></i>
+        <span><strong>Facturación y planes</strong></span>
+      </div>
+      <div class="profile-link">
+        <i class="fas fa-question-circle"></i>
+        <span><strong>Ayuda</strong></span>
+      </div>
+    </div>
+    <div class="profile-popup" *ngIf="showPopup">
+        <div class="profile-popup-content">
+          <div class="popup-profile-info">
+            <h2><strong>Foto de Perfil</strong></h2>
+            <img src="../assets/perfil.jpg" alt="Imagen de perfil" class="popup-profile-image"> 
+            <p><button>Quitar Foto</button> </p>
+            <a><button>Cambiar Foto</button></a>
+            <div class="popup-user-details">
+              <h2> <strong>Nombre del Usuario</strong></h2>
+              <p>SEBASTIAN CÓRDOVA VALDIVIA</p>
+              <button>Editar</button>
+              <h2><strong>CORREO ELECTRÓNICO</strong></h2>
+              <p>correo@ejemplo.com</p>
+              <button>Editar</button>
+              <h2><strong>Idioma</strong></h2>
+              <p>Español</p>
+              <button>Editar</button>
+            </div>
+          </div>
+        </div>
+  </div>
+  
