@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {MatPaginator} from "@angular/material/paginator";
 
 @Component({
   selector: 'app-faq',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent {
+  @ViewChild(MatPaginator,{static:false}) Paginator!:MatPaginator
   preguntas = [
     {
       texto: "¿Los precios de los combustibles son los más confiables?",
@@ -23,8 +25,18 @@ export class FaqComponent {
       mostrarRespuesta: false
     },
     {
-      texto: "¿Cada cuánto tiempo actualizan los tarifarios de los combustibles?",
-      respuesta: "Actualizamos nuestros tarifarios de combustibles de forma regular, generalmente cada semana. Consulta nuestras tarifas más recientes en línea.",
+      texto: "¿Cuál es la calidad de los combustibles que ofrecen?",
+      respuesta: "Nos enorgullece ofrecer combustibles de alta calidad que cumplen con las normativas más estrictas de seguridad y medio ambiente.",
+      mostrarRespuesta: false
+    },
+    {
+      texto: "¿Cuál es el horario de funcionamiento del grifo?",
+      respuesta: "Nuestro grifo está abierto las 24 horas del día, los 7 días de la semana para tu conveniencia.",
+      mostrarRespuesta: false
+    },
+    {
+      texto: "¿Aceptan tarjetas de crédito o débito en el grifo?",
+      respuesta: "Sí, aceptamos tarjetas de crédito y débito como forma de pago en todas nuestras estaciones de servicio.",
       mostrarRespuesta: false
     }
   ];

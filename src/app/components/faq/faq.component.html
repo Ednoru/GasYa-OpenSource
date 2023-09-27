@@ -7,4 +7,5 @@
     </div>
     <button (click)="toggleRespuesta(i)" *ngIf="!pregunta.mostrarRespuesta">Ver más</button>
   </div>
+  <mat-paginator [pageSizeOptions]="[6, 10, 15]" [pageSize]="6" showFirstLastButtons></mat-paginator>
 </div>

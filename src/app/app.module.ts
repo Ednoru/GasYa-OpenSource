@@ -17,6 +17,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {MatIconModule} from "@angular/material/icon";
     MatGridListModule,
     MatMenuModule,
     MatIconModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
