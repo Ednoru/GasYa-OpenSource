@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./grifos.component.css']
 })
 export class GrifosComponent {
+  botonActivo: string | null = null;
 
+  mostrar(idDiv: string): void {
+    this.botonActivo = idDiv;
+  }
 }

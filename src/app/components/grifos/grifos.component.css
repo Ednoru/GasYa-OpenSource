@@ -1,0 +1,175 @@
+/*--------------GRIFOS-----------------*/
+.titulogrifo{
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.boton-container{
+  margin-bottom: 20px;
+  width: auto;
+}
+
+.boton-container button.activo {
+  background-color: red;
+  color: white;
+}
+
+button {
+  width: 50;
+  background-color: white;
+  font-weight: auto;
+  font-size: auto;
+  padding: 15px 40px;
+  border-color: red;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 35px;
+  margin-bottom: 20px;
+}
+
+.btnRepsol, .btnPPeru, .btnPrimax, .btnPecsa{
+  margin-right: 12px;
+}
+
+
+button:hover {
+  background-color: red;
+  color:white;
+}
+
+.Regular, .Premium{
+  display: flex;
+  align-items: stretch;
+}
+
+.nombreCombustible{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vh;
+  font-weight: bold;
+}
+
+
+.descripcionCombustible{
+  text-align: left;
+}
+
+
+.precioCombustible{
+  text-align: left;
+}
+
+.descripcionRegular, .descripcionPremium {
+  flex-grow: 1;
+  background-color: rgba(169, 245, 248, 0.986);
+  border-radius: 20px;
+  border: 2px solid rgba(169, 245, 248, 0.986);
+  padding: 8px;
+  margin-bottom:20px;
+
+}
+
+#divRepsol img {
+  max-width: 225px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-bottom: 40px;
+}
+
+#divPetroPeru img {
+  max-width: 225px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-bottom: 40px;
+}
+
+#divPrimax img {
+  max-width: 225px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-bottom: 40px;
+}
+
+#divPecsa img {
+  max-width: 225px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-bottom: 40px;
+}
+
+/*--------------PROMOCIONES--------------------*/
+.titulopromociones{
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.Promocion{
+  display: flex;
+  align-items: stretch;
+}
+
+.nombrePromocion{
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vh;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+
+.descripcionPromocion {
+  flex-grow: 1;
+  background-color: rgba(169, 245, 248, 0.986);
+  border-radius: 20px;
+  border: 2px solid rgba(169, 245, 248, 0.986);
+  padding: 8px;
+  margin-bottom:20px;
+
+}
+
+.Promocion .promo1 {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.Promocion .promo2 {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 30px  ;
+}
+
+.Promocion .promo3   {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 30px  ;
+}
+
+/*--------------Estructura final--------------------*/
+.container{
+  display: flex;
+  width: 100%;
+}
+.seccion{
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.seccion-left{
+  background-color: white;
+  border-right: 2px solid rgb(88, 86, 86);
+}
+.seccion-right{
+  background-color: white;
+}

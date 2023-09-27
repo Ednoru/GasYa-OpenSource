@@ -1,1 +1,141 @@
-<p>grifos works!</p>
+<div class="container">
+  <div class="seccion seccion-left">
+    <h1 class="titulogrifo">Grifos Asociados</h1>
+
+    <div class="boton-container">
+      <button class="btnRepsol" [class.activo]="botonActivo === 'divRepsol'" (click)="mostrar('divRepsol')">Repsol</button>
+      <button class="btnPPeru" [class.activo]="botonActivo === 'divPetroPeru'" (click)="mostrar('divPetroPeru')">PetroPeru</button>
+      <button class="btnPrimax"[class.activo]="botonActivo === 'divPrimax'" (click)="mostrar('divPrimax')">Primax</button>
+      <button class="btnPecsa" [class.activo]="botonActivo === 'divPecsa'" (click)="mostrar('divPecsa')">Pecsa</button>
+    </div>
+
+    <div class="infogrifo-container">
+      <div *ngIf="botonActivo === 'divRepsol'">
+        <div class="Regular">
+          <img src="src/assets/Grifos/RegularRepsol.png" alt="Gasolina Regular">
+          <div class="descripcionRegular">
+            <p class="nombreCombustible">G Regular Neotech</p>
+            <div class="contenido">
+              <p class="descripcionCombustible">Descripcion: Si antes usabas gasolina de 84 o 90,
+                Ahora deberás usar Repsol G Regular con Neotech.  </p>
+              <p class="precioCombustible">Precio: S/.17.39 x Galon</p>
+            </div>
+          </div>
+        </div>
+        <div class="Premium">
+          <img src="src/assets/Grifos/PremiumRepsol.png" alt="Gasolina Premium">
+          <div class="descripcionPremium">
+            <p class="nombreCombustible">G Premium Neotech</p>
+            <div class="contenido">
+              <p class="descripcionCombustible">Descripcion: Si antes usabas gasolina de 95 o 98,
+                Ahora deberás usar Repsol G Premium con Neotech.</p>
+              <p class="precioCombustible">Precio: S/.18.99 x Galon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="botonActivo === 'divPetroPeru'">
+        <div class="Regular">
+          <img src="src/assets/Grifos/RegularPPeru.png" alt="Gasolina Regular">
+          <div class="descripcionRegular">
+            <p class="nombreCombustible">Superplus Regular</p>
+            <div class="contenido">
+              <p class="descripcionCombustible">Descripcion: Si antes usabas gasolina de 84 o 90,
+                Ahora deberás usar G-Superplus Regular.</p>
+              <p class="precioCombustible">Precio: S/.17.30 x Galon</p>
+            </div>
+          </div>
+        </div>
+        <div class="Premium">
+          <img src="src/assets/Grifos/PremiumPPeru.png" alt="Gasolina Premium">
+          <div class="descripcionPremium">
+            <p class="nombreCombustible">Superplus Premium</p>
+            <div class="contenido">
+              <p class="descripcionCombustible">Descripcion: Si antes usabas gasolina de 95 o 97,
+                Ahora deberás usar G-Superplus Premium.</p>
+              <p class="precioCombustible">Precio: S/.18.70 x Galon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="botonActivo === 'divPrimax'">
+        <div class="Regular">
+          <img src="src/assets/Grifos/RegularPrimax.png" alt="Gasolina Regular">
+          <div class="descripcionRegular">
+            <p class="nombreCombustible">G-Regular</p>
+            <div class="contenido">
+              <p class="descripcionCombustible">Descripcion: G-Regular:ADITIVOS ALEMANES, MÁS LIMPIEZA
+                Y MEJOR CUIDADO DEL MOTOR</p>
+              <p class="precioCombustible">Precio: S/.18.25 x Galon</p>
+            </div>
+          </div>
+        </div>
+        <div class="Premium">
+          <img src="src/assets/Grifos/PremiumPrimax.png" alt="Gasolina Premium">
+          <div class="descripcionPremium">
+            <p class="nombreCombustible">G-Premium G-Prix</p>
+            <div class="contenido">
+              <p class="descripcionCombustible">Descripcion: MAYOR POTENCIA DEL MOTOR, MAYOR LIMPIEZA DEL MOTOR,
+                MÁS RENDIMIENTO, EXTIENDE LA VIDA ÚTIL DEL MOTOR</p>
+              <p class="precioCombustible">Precio: S/.20.69 x Galon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="botonActivo === 'divPecsa'">
+        <div class="Regular">
+          <img src="src/assets/Grifos/RegularPecsa.png" alt="Gasolina Regular">
+          <div class="descripcionRegular">
+            <p class="nombreCombustible">G-Regular</p>
+            <div class="contenido">
+              <p class="descripcionCombustible">Descripcion: G-Regular: Para vehiculos que usan gasolina de 84 y 90</p>
+              <p class="precioCombustible">Precio: S/.17.81 x Galon</p>
+            </div>
+          </div>
+        </div>
+        <div class="Premium">
+          <img src="src/assets/Grifos/PremiumPecsa.png" alt="Gasolina Premium">
+          <div class="descripcionPremium">
+            <p class="nombreCombustible">G-Premium</p>
+            <div class="contenido">
+              <p class="descripcionCombustible">Descripcion: G-Premium: Para vehiculos que usan gasolina de 95 y 97</p>
+              <p class="precioCombustible">Precio: S/.19.20 x Galon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="seccion seccion-right">
+    <h1 class="titulopromociones">Promociones(*)</h1>
+    <div class="Promocion">
+      <img class="promo1" src="src/assets/Grifos/Promocion1.png" alt="Promocion 1">
+      <div class="descripcionPromocion">
+        <p class="nombrePromocion">SuperPromo Regular</p>
+        <p class="descripcionPromocion">Descripcion: 20% de descuento en consumos mayores a S/200 en gasolina regular</p>
+      </div>
+    </div>
+
+    <div class="Promocion">
+      <img class="promo2" src="src/assets/Grifos/Promocion2.png" alt="Promocion 2">
+      <div class="descripcionPromocion">
+        <p class="nombrePromocion">SuperPromo Aceite</p>
+        <p class="descripcionPromocion">Descripcion: 10% de descuento en cambios de aceite en centros autorizados,
+          aplica terminos y condiciones</p>
+      </div>
+    </div>
+
+    <div class="Promocion">
+      <img class="promo3" src="src/assets/Grifos/Promocion3.png" alt="Promocion 3">
+      <div class="descripcionPromocion">
+        <p class="nombrePromocion">SuperPromo Papitas</p>
+        <p class="descripcionPromocion">Descripcion: Por cada S/.120 en combustibles premium llevate un pack de papitas</p>
+      </div>
+    </div>
+  </div>
+</div>
