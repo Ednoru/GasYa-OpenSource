@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
+  showPopup = false;
 
+  showProfilePopup() {
+    this.showPopup = !this.showPopup;
+  }
 }
