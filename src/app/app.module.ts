@@ -9,10 +9,14 @@ import { GrifosComponent } from './components/grifos/grifos.component';
 import { FAQComponent } from './components/faq/faq.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {AppRoutingModule} from "./app-routing.module";
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatButtonModule} from "@angular/material/button";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -24,15 +28,18 @@ import {MatButtonModule} from "@angular/material/button";
     FAQComponent,
     PageNotFoundComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        RouterLink,
-        RouterOutlet,
-        MatButtonModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    RouterLink,
+    RouterOutlet,
+    MatButtonModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
