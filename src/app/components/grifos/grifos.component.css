@@ -20,7 +20,7 @@ button {
   background-color: white;
   font-weight: 150;
   font-size: 15px;
-  padding: 15px 40px;
+  padding: 15px ;
   border-color: red;
   border-width: 3px;
   border-style: solid;
@@ -31,6 +31,7 @@ button {
 
 .btnRepsol, .btnPPeru, .btnPrimax, .btnPecsa{
   margin-right: 12px;
+
 }
 
 
@@ -72,37 +73,24 @@ button:hover {
 
 }
 
-#divRepsol img {
-  max-width: 225px;
+.infogrifo-container .Regular img,
+.infogrifo-container .Premium img {
+  max-width: 215px;
   height: auto;
-  border-radius: 5px;
+  border-radius: 15px;
   margin-right: 15px;
   margin-bottom: 40px;
 }
 
-#divPetroPeru img {
-  max-width: 225px;
-  height: auto;
-  border-radius: 5px;
-  margin-right: 15px;
-  margin-bottom: 40px;
-}
 
-#divPrimax img {
-  max-width: 225px;
+/*#divRepsol img, #divPetroPeru img, #divPrimax img, #divPecsa img {
+  max-width: 175px;
   height: auto;
   border-radius: 5px;
   margin-right: 15px;
   margin-bottom: 40px;
-}
+}*/
 
-#divPecsa img {
-  max-width: 225px;
-  height: auto;
-  border-radius: 5px;
-  margin-right: 15px;
-  margin-bottom: 40px;
-}
 
 /*--------------PROMOCIONES--------------------*/
 .titulopromociones{
