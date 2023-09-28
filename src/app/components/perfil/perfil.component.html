@@ -1,10 +1,9 @@
 <div class="profile-section">
   <div class="profile-info">
     <img src="../assets/perfil.jpg" alt="Imagen de perfil" class="profile-image">
-
     <div class="user-details">
-      <h2><strong>SEBASTIAN CÓRDOVA VALDIVIA</strong></h2>
-      <p>sebascordoba123@gmail.com</p>
+      <h2><strong>{{ nombreUsuario }}</strong></h2>
+      <p>{{ correoElectronico }}</p>
     </div>
     <hr class="divider-line">
   </div>
@@ -31,23 +30,34 @@
     </div>
   </div>
   <div class="profile-popup" *ngIf="showPopup">
-      <div class="profile-popup-content">
-        <div class="popup-profile-info">
-          <h2><strong>Foto de Perfil</strong></h2>
-          <img src="../assets/perfil.jpg" alt="Imagen de perfil" class="popup-profile-image"> 
-          <p><button>Quitar Foto</button> </p>
-          <a><button>Cambiar Foto</button></a>
-          <div class="popup-user-details">
-            <h2> <strong>Nombre</strong></h2>
-            <p>SEBASTIAN CÓRDOVA VALDIVIA</p>
-            <button>Editar</button>
-            <h2><strong>Correo Electrónico</strong></h2>
-            <p>sebascordoba123@gmail.com</p>
-            <button>Editar</button>
-            <h2><strong>Idioma</strong></h2>
-            <p>Español</p>
-            <button>Editar</button>
-          </div>
+    <div class="profile-popup-content">
+      <div class="popup-profile-info">
+        <h2><strong>Foto de Perfil</strong></h2>
+        <img src="../assets/perfil.jpg" alt="Imagen de perfil" class="popup-profile-image">
+        <p><button>Quitar Foto</button></p>
+        <a><button>Cambiar Foto</button></a>
+        <div class="popup-user-details">
+          <h2><strong>Nombre</strong></h2>
+          <p *ngIf="!editandoNombre">{{ nombreUsuario }}</p>
+          <input *ngIf="editandoNombre" [(ngModel)]="nombreEditado" type="text">
+          <button *ngIf="!editandoNombre" (click)="editarNombre()">Editar</button>
+          <button *ngIf="editandoNombre" (click)="guardarNombre()" class="guardar">Guardar</button>
+
+          <h2><strong>Correo Electrónico</strong></h2>
+          <p *ngIf="!editandoCorreo">{{ correoElectronico }}</p>
+          <input *ngIf="editandoCorreo" [(ngModel)]="correoEditado" type="text">
+          <button *ngIf="!editandoCorreo" (click)="editarCorreo()">Editar</button>
+          <button *ngIf="editandoCorreo" (click)="guardarCorreo()" class="save">Guardar</button>
+
+          <h2><strong>Idioma</strong></h2>
+          <p *ngIf="!editandoIdioma">{{ idioma }}</p>
+          <button *ngIf="!editandoIdioma" (click)="toggleEditIdioma()">Editar</button>
+          <select *ngIf="editandoIdioma" [(ngModel)]="idioma" class="select-field">
+            <option *ngFor="let opcion of opcionesIdioma" [value]="opcion.codigo">{{ opcion.nombre }}</option>
+          </select>
+          <button *ngIf="editandoIdioma" (click)="guardarIdioma()" class="sa">Guardar</button>
         </div>
       </div>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
@@ -41,6 +42,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatMenuModule,
     MatIconModule,
     MatPaginatorModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

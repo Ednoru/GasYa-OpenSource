@@ -160,3 +160,49 @@
   margin-top: -40px;
   margin-left: 90px;
 }
+input[type="text"] {
+  width: 60%; /* Ancho del campo al 100% del contenedor */
+  padding: 8px; /* Relleno interno para mejorar la apariencia */
+  border: 1px solid #ccc; /* Borde del campo */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+}
+.select-field {
+  margin-left: 0px;
+  width: auto;
+  appearance: none; /* Ocultar la apariencia predeterminada del selector */
+  padding: 8px 24px 8px 12px; /* Ajustar el espaciado y el tamaño */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.select-field option {
+  padding: 8px;
+  background-color: #fff; /* Fondo de las opciones */
+  color: #333; /* Color del texto de las opciones */
+  font-size: 16px;
+}
+.select-field option:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Estilo para la opción seleccionada */
+.select-field option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+.popup-user-details button.guardar {
+  left: 460px; 
+  top: 280px;/* Posición inicial del botón "Guardar" (ajústalo según tus necesidades) */
+}
+.popup-user-details button.save {
+  left: 460px; 
+  top: 360px;/* Posición inicial del botón "Guardar" (ajústalo según tus necesidades) */
+}
+.popup-user-details button.sa {
+  left: 460px; 
+  top: 440px;/* Posición inicial del botón "Guardar" (ajústalo según tus necesidades) */
+}
