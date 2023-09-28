@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./reportar-problema.component.css']
 })
 export class ReportarProblemaComponent {
-
+  seleccionarOpcion(boton: HTMLElement) {
+    const botones = document.querySelectorAll('.boton');
+    botones.forEach(b => b.classList.remove('seleccionado'));
+    boton.classList.add('seleccionado');
+  }
 }

@@ -1,0 +1,11 @@
+.btn {
+  border-radius: 20px;
+  background-color: #e31515;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* Columna 1/4 y columna 3/4 */
+  gap: 20px;
+}
