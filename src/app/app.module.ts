@@ -19,6 +19,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { FooterComponent } from './public/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     ReportarProblemaComponent,
     GrifosComponent,
     FaqComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
