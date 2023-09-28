@@ -32,24 +32,24 @@
   <div class="profile-popup" *ngIf="showPopup">
     <div class="profile-popup-content">
       <div class="popup-profile-info">
-        <h2><strong>Foto de Perfil</strong></h2>
+        <h3><strong>Foto de Perfil</strong></h3>
         <img src="../assets/perfil.jpg" alt="Imagen de perfil" class="popup-profile-image">
         <p><button>Quitar Foto</button></p>
         <a><button>Cambiar Foto</button></a>
         <div class="popup-user-details">
-          <h2><strong>Nombre</strong></h2>
+          <h3><strong>Nombre</strong></h3>
           <p *ngIf="!editandoNombre">{{ nombreUsuario }}</p>
           <input *ngIf="editandoNombre" [(ngModel)]="nombreEditado" type="text">
           <button *ngIf="!editandoNombre" (click)="editarNombre()">Editar</button>
           <button *ngIf="editandoNombre" (click)="guardarNombre()" class="guardar">Guardar</button>
 
-          <h2><strong>Correo Electrónico</strong></h2>
+          <h3><strong>Correo Electrónico</strong></h3>
           <p *ngIf="!editandoCorreo">{{ correoElectronico }}</p>
           <input *ngIf="editandoCorreo" [(ngModel)]="correoEditado" type="text">
           <button *ngIf="!editandoCorreo" (click)="editarCorreo()">Editar</button>
           <button *ngIf="editandoCorreo" (click)="guardarCorreo()" class="save">Guardar</button>
 
-          <h2><strong>Idioma</strong></h2>
+          <h3><strong>Idioma</strong></h3>
           <p *ngIf="!editandoIdioma">{{ idioma }}</p>
           <button *ngIf="!editandoIdioma" (click)="toggleEditIdioma()">Editar</button>
           <select *ngIf="editandoIdioma" [(ngModel)]="idioma" class="select-field">
