@@ -1,0 +1,37 @@
+/* Estilo para el formulario */
+form {
+    border:1px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* Espacio entre los elementos del formulario */
+form div {
+    margin-bottom: 10px;
+}
+
+/* Estilo para los campos de entrada */
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para el botón de enviar */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Cambio de estilo para el botón cuando se pasa el mouse por encima */
+button:hover {
+    background-color: #0056b3;
+}

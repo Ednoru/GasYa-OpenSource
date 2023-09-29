@@ -6,6 +6,8 @@ import {GrifosComponent} from "./components/grifos/grifos.component";
 import {FaqComponent} from "./components/faq/faq.component";
 import {ReportarProblemaComponent} from "./components/reportar-problema/reportar-problema.component";
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
+import { InicioSesionComponent } from "./components/inicio-sesion/inicio-sesion.component";
+import { RegistroComponent } from "./components/registro/registro.component";
 
 
 const routes: Routes = [
@@ -15,7 +17,10 @@ const routes: Routes = [
   { path: 'grifos', component: GrifosComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'reportarProblema', component: ReportarProblemaComponent },
+  { path: 'iniciosesion',component:InicioSesionComponent},
+  { path: 'registro',component:RegistroComponent},
   { path: '**', component: PageNotFoundComponent },
+
 ];
 
 @NgModule({
