@@ -1,24 +1,32 @@
-// user.service.ts
-import { of } from 'rxjs';
-import { Injectable } from '@angular/core';
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+import {map, Observable} from "rxjs";
+
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
+  private apiURL = 'http://localhost:3000/usuarios';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  addUser(user: any) {
-    // Aquí es donde guardarías en el archivo .json, pero por simplicidad vamos a usar localStorage
-    const users: any[] = JSON.parse(localStorage.getItem('users') || '[]');
-    users.push(user);
-    localStorage.setItem('users', JSON.stringify(users));
-    return of(user);  // Este es un observable falso, en un entorno real harías un http.post
+  addUser(user: any): Observable<any> {
+    return this.http.post<any>(this.apiURL, user);
   }
 
-  getUserByEmail(email: string) {
-    const users: any[] = JSON.parse(localStorage.getItem('users') || '[]');
-    return of(users.find(user => user.email === email));
+  getUserByEmail(email: string): Observable<any> {
+    return this.http.get<any[]>(this.apiURL).pipe(
+      map(users => users.find(user => user.correo === email))
+    );
+  }
+
+  getPerfil(): Observable<any> {
+    return this.http.get<any>(this.apiURL);
+  }
+
+  actualizarPerfil(datos: any): Observable<any> {
+    return this.http.put<any>(this.apiURL, datos);
   }
 }
