@@ -13,5 +13,7 @@ export class AppComponent {
     { path: '/grifos', title: 'Grifos' },
     { path: '/faq', title: 'FAQ' },
     { path: '/reportarProblema', title: 'Reportar Problema' },
+    { path: '/iniciosesion', title: 'Iniciar Sesion' },
+    { path: '/registro', title: 'Registro' },
   ];
 }

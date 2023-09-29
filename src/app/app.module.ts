@@ -8,6 +8,8 @@ import { BuscarGrifoComponent } from './components/buscar-grifo/buscar-grifo.com
 import { ReportarProblemaComponent } from './components/reportar-problema/reportar-problema.component';
 import { GrifosComponent } from './components/grifos/grifos.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
+import { RegistroComponent } from './components/registro/registro.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {AppRoutingModule} from "./app-routing.module";
 
@@ -21,6 +23,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { FooterComponent } from './public/footer/footer.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +35,9 @@ import { FooterComponent } from './public/footer/footer.component';
     GrifosComponent,
     FaqComponent,
     PageNotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    InicioSesionComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +52,7 @@ import { FooterComponent } from './public/footer/footer.component';
     MatIconModule,
     MatPaginatorModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,28 @@
+<section class="SignUpScreen">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h1 class="tituloSU">Registrate</h1>
+        <div class="input-group">
+          <label>Nombre:</label>
+          <input type="text" formControlName="nombre" placeholder="Ingrese su nombre">
+        </div>
+      
+        <div class="input-group">
+          <label>Apellido:</label>
+          <input type="text" formControlName="apellido" placeholder="Ingrese su apellido">
+        </div>
+      
+        <div class="input-group">
+          <label>Correo:</label>
+          <input type="email" formControlName="correo" placeholder="Ingrese su correo">
+        </div>
+      
+        <div class="input-group">
+          <label>Contraseña:</label>
+          <input type="password" formControlName="contraseña" placeholder="Ingrese su contraseña">
+        </div>
+      
+        <button type="submit">Registrar</button>
+      </form>
+</section>
+
+  
