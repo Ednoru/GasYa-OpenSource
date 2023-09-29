@@ -13,6 +13,16 @@
   margin: 5px;
   cursor: pointer;
 }
+
+.button-not {
+  background-color: #24A476;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
 .seleccionado {
   background-color: #d1cccc;
   color: #24A476;
@@ -49,5 +59,37 @@ textarea {
   margin-top: 10px;
   cursor: pointer;
   margin-bottom: 23.5%;
+}
+
+.alert-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d5d4d4;
+  padding: 20px;
+  border: 1px solid #24A476;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 20%;
+  height: 20%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #24A476;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.alert-popup p {
+  margin-top: 35px;
+  margin-bottom: 20px;
 }
 

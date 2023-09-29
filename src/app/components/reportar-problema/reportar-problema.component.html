@@ -10,6 +10,10 @@
   <div class="problema-container">
     <h2>Detalles del problema:</h2>
     <textarea v-model="detallesProblema" rows="4"></textarea>
-    <button class="boton-not">Notificar</button>
+    <button class="button-not" (click)="showAlert()">Notificar</button>
   </div>
+</div>
+<div class="alert-popup" *ngIf="showPopup">
+  <p>Su reporte se registró exitosamente.</p>
+  <button class="close-button" (click)="closeAlert()">X</button>
 </div>

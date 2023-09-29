@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-reportar-problema',
@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./reportar-problema.component.css']
 })
 export class ReportarProblemaComponent {
-  seleccionarOpcion(boton: HTMLElement) {
-    const botones = document.querySelectorAll('.boton');
-    botones.forEach(b => b.classList.remove('seleccionado'));
-    boton.classList.add('seleccionado');
+
+  showPopup = false;
+
+  showAlert() {
+    this.showPopup = !this.showPopup;
+  }
+
+  closeAlert() {
+    this.showPopup = false;
   }
 }
