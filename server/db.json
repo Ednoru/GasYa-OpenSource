@@ -76,6 +76,13 @@
       "correo": "eldiyei@gmail.com",
       "contrasena": "manyao123",
       "id": 11
+    },
+    {
+      "nombre": "Pepe",
+      "apellido": "Panchrasio",
+      "correo": "ola@gmail.com",
+      "contrasena": "ola123456",
+      "id": 12
     }
   ]
 }
