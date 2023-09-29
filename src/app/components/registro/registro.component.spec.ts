@@ -1,21 +1,36 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// registro.component.ts
 
-import { RegistroComponent } from './registro.component';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service'; // Asegúrate de importar desde el camino correcto
 
-describe('RegistroComponent', () => {
-  let component: RegistroComponent;
-  let fixture: ComponentFixture<RegistroComponent>;
+@Component({
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css']
+})
+export class RegistroComponent implements OnInit {
+  
+  registerForm!: FormGroup;
+  
+  constructor(private fb: FormBuilder, private userService: UserService) { }
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [RegistroComponent]
+  ngOnInit(): void {
+    this.registerForm = this.fb.group({
+      nombre: ['', Validators.required],
+      apellido: ['', Validators.required],
+      correo: ['', [Validators.required, Validators.email]],
+      contrasena: ['', Validators.required]
     });
-    fixture = TestBed.createComponent(RegistroComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  onSubmit() {
+    if (this.registerForm.valid) {
+      this.userService.addUser(this.registerForm.value).subscribe((response: any) => {
+        console.log('Usuario registrado', response);
+      });
+      
+    }
+  }
+}
+
