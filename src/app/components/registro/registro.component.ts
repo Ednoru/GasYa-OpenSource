@@ -1,8 +1,7 @@
-// registro.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from 'src/app/services/user.service';  // Asegúrate de importar desde el camino correcto
+import { UserService } from 'src/app/services/user.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registro',
@@ -10,10 +9,10 @@ import { UserService } from 'src/app/services/user.service';  // Asegúrate de i
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-  
+
   registerForm!: FormGroup;
-  
-  constructor(private fb: FormBuilder, private userService: UserService) { }
+
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -28,7 +27,10 @@ export class RegistroComponent implements OnInit {
     if (this.registerForm.valid) {
       this.userService.addUser(this.registerForm.value).subscribe(response => {
         console.log('Usuario registrado', response);
+        this.router.navigate(['/iniciosesion']);
       });
+    } else {
+      console.log('Datos inválidos');
     }
   }
 }
