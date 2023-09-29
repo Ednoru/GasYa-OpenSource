@@ -1,0 +1,5 @@
+Como administrador quiero que la interfaz tenga un diseño atractivo para que los usuarios se sientan más cómodos y la usen más 
+
+When el usuario ingrese al app
+Then se le mostrara un diseño simple de entender 
+and facil de usar
