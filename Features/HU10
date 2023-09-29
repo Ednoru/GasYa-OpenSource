@@ -1,0 +1,6 @@
+Como cliente quiero poder dejar mis comentarios sobre la aplicación para que sea mejor o resolver algún problema. 
+
+Given el usuario quiera resolver un problema con la app
+When entra a la seecion de Reportar un problema
+And detalla su problema 
+Then le da al botón de reporte para poder solucionarlo
