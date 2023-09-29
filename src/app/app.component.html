@@ -2,11 +2,9 @@
   <mat-toolbar class="toolbar" color="primary">
     <h1 class="logo">Gas Ya!</h1>
     <div class="mat-spacer"></div>
-    <a
-      mat-button
+    <a mat-button
       *ngFor="let option of options"
-      [routerLink]="option.path"
-    >
+      [routerLink]="option.path">
       {{ option.title }}
     </a>
   </mat-toolbar>
