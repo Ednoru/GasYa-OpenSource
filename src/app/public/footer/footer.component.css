@@ -1,0 +1,10 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e31515;
+}
+
+p {
+  text-align: center;
+}
