@@ -21,3 +21,12 @@
   padding: 10px;
   margin-bottom: 12px;
 }
+.btnfaq{
+  background-color: #24A476;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
