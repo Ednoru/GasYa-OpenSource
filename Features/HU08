@@ -1,0 +1,6 @@
+Como cliente, quiero tener acceso a un listado de las ubicaciones de estaciones de servicio, 
+para poder evaluar y/o comparar distancias a la hora de abastecer mi vehículo. 
+
+When el cliente ingrese la ubicacion que se encuentra 
+and le de click al botón buscar
+Then se le mostrara en el mapa la cantidad de estaciones de servicio en su zona
