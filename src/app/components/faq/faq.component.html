@@ -5,7 +5,7 @@
     <div class="pregunta-contenido" [hidden]="!pregunta.mostrarRespuesta">
       <p>{{ pregunta.respuesta }}</p>
     </div>
-    <button (click)="toggleRespuesta(i)" *ngIf="!pregunta.mostrarRespuesta">Ver más</button>
+    <button class ="btnfaq" (click)="toggleRespuesta(i)" *ngIf="!pregunta.mostrarRespuesta">Ver más</button>
   </div>
   <mat-paginator [pageSizeOptions]="[6, 10, 15]" [pageSize]="6" showFirstLastButtons></mat-paginator>
 </div>
