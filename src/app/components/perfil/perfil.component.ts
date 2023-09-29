@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
 
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.css']
 })
+
 export class PerfilComponent {
+
   nombreUsuario: string = 'SEBASTIAN CÓRDOVA VALDIVIA';
   correoElectronico: string = 'sebascordoba123@gmail.com';
   nombreEditado: string = '';
@@ -15,6 +17,7 @@ export class PerfilComponent {
   editandoCorreo: boolean = false;
   editandoIdioma: boolean = false;
   showPopup = false;
+
   showProfilePopup() {
     this.showPopup = !this.showPopup;
   }
