@@ -1,0 +1,6 @@
+Como administrador, quiero que el programa actualice diariamente los precios de los combustibles
+en cada estación de servicio para que los usuarios tengan acceso a una tarifa con informacion confiable 
+
+When el cliente ingrese al app
+and le de click al botón Grifos
+Then se le mostrara un listado de los precios actualizados de los combustibles
