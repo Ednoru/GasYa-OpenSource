@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative; 
 }
 
 .profile-image {
@@ -36,17 +36,16 @@
 }
 
 .divider-line {
-  border: 1px solid black;
+  border: 1px solid black; 
   width: 160%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-bottom: -20px;
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  margin-bottom: -20px; 
 }
 
 .profile-links {
-  margin-top: 45px;
-  margin-bottom: 0;
+  margin-top: 70px;
   text-align: left;
 }
 
@@ -56,7 +55,7 @@
   align-items: center;
   margin-bottom: 45px;
   margin-left: 40px;
-  font-size: 18px;
+  font-size: 18px; 
   width: 100%;
 }
 
@@ -72,47 +71,37 @@
 .profile-link i.fa-credit-card {
   margin-right: 10px;
   font-size: 28px;
-  margin-right: 30px;
+  margin-right: 30px; 
 }
 .profile-link i.fa-cog{
   margin-right: 10px;
-  font-size: 28px;
+  font-size: 28px; 
   margin-right: 30px;
 }
 .profile-link i.fa-lock{
   margin-right: 10px;
-  font-size: 28px;
+  font-size: 28px; 
   margin-right: 30px;
 }
 .profile-link i.fa-user{
   margin-right: 10px;
-  font-size: 28px;
+  font-size: 28px; 
   margin-right: 30px;
 }
 .profile-link i.fa-question-circle{
   margin-right: 10px;
-  font-size: 28px;
+  font-size: 28px; 
   margin-right: 30px;
 }
 .profile-popup {
   width: 55%;
-  height: 50%;
+  height: 80%;
   position: absolute;
   left: 40%;
   top: 38%;
   background-color: #edebeb;
   border-radius: 20px;
 }
-
-.profile-popup-content{
-  /* todo el contenido debe cuadrar dentrp del profile-popup */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
-
-}
-
 .popup-profile-info{
   text-align: left;
   flex-wrap: wrap;
@@ -123,7 +112,7 @@
   font-size: 20px;
   flex: 1;
 }
-.popup-profile-info h2 {
+.popup-profile-info h3 {
   font-size: 35px;
   flex: 1;
 }
@@ -172,17 +161,17 @@
   margin-left: 90px;
 }
 input[type="text"] {
-  width: 60%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  width: 60%; 
+  padding: 8px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 16px; 
 }
 .select-field {
   margin-left: 0px;
   width: auto;
-  appearance: none;
-  padding: 8px 24px 8px 12px;
+  appearance: none; 
+  padding: 8px 24px 8px 12px; 
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
@@ -191,8 +180,8 @@ input[type="text"] {
 }
 .select-field option {
   padding: 8px;
-  background-color: #fff;
-  color: #333;
+  background-color: #fff; 
+  color: #333; 
   font-size: 16px;
 }
 .select-field option:hover {
@@ -206,14 +195,14 @@ input[type="text"] {
   color: #fff;
 }
 .popup-user-details button.guardar {
-  left: 460px;
+  left: 460px; 
   top: 280px;
 }
 .popup-user-details button.save {
-  left: 460px;
+  left: 460px; 
   top: 360px;
 }
 .popup-user-details button.sa {
-  left: 460px;
+  left: 460px; 
   top: 440px;
 }
