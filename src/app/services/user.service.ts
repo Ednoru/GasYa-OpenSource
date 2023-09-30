@@ -8,7 +8,7 @@ import {map, Observable} from "rxjs";
 })
 
 export class UserService {
-  private apiURL = 'http://localhost:3000/usuarios';
+  private apiURL = 'https://my-json-server.typicode.com/Ednoru/GasYa-OpenSource/usuarios';
 
   constructor(private http: HttpClient) { }
 
@@ -20,13 +20,5 @@ export class UserService {
     return this.http.get<any[]>(this.apiURL).pipe(
       map(users => users.find(user => user.correo === email))
     );
-  }
-
-  getPerfil(): Observable<any> {
-    return this.http.get<any>(this.apiURL);
-  }
-
-  actualizarPerfil(datos: any): Observable<any> {
-    return this.http.put<any>(this.apiURL, datos);
   }
 }

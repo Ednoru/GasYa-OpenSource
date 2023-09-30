@@ -83,6 +83,13 @@
       "correo": "ola@gmail.com",
       "contrasena": "ola123456",
       "id": 12
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Caceres",
+      "correo": "jcaceres@gmail.com",
+      "contrasena": "elpepe123",
+      "id": 13
     }
   ]
 }
