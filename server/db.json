@@ -91,5 +91,99 @@
       "contrasena": "elpepe123",
       "id": 13
     }
+  ],
+  "grifos": [
+    {
+      "id": 1,
+      "nombre": "Repsol",
+      "combustible": [
+        {
+          "nombre": "G Regular Neotech",
+          "logo": "RegularRepsol",
+          "precio": 17.39,
+          "descripcion": "Si antes usabas gasolina de 84 o 90, Ahora deberás usar Repsol G Regular con Neotech."
+        },
+        {
+          "nombre": "G Premium Neotech",
+          "logo": "PremiumRepsol",
+          "precio": 18.99,
+          "descripcion": "Si antes usabas gasolina de 95 o 98, Ahora deberás usar Repsol G Premium con Neotech."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "PetroPeru",
+      "combustible": [
+        {
+          "nombre": "Superplus Regular",
+          "logo": "RegularPPeru",
+          "precio": 17.30,
+          "descripcion": "Si antes usabas gasolina de 84 o 90, Ahora deberás usar G-Superplus Regular."
+        },
+        {
+          "nombre": "Superplus Premium",
+          "logo": "PremiumPPeru",
+          "precio": 18.70,
+          "descripcion": "Si antes usabas gasolina de 95 o 97, Ahora deberás usar G-Superplus Premium."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Primax",
+      "combustible": [
+        {
+          "nombre": "G-Regular",
+          "logo": "RegularPrimax",
+          "precio": 18.25,
+          "descripcion": "Si antes usabas gasolina de 84 o 90, Ahora deberás usar G-84."
+        },
+        {
+          "nombre": "G-Premium G-Prix",
+          "logo": "PremiumPrimax",
+          "precio": 20.69,
+          "descripcion": "Si antes usabas gasolina de 95 o 97, Ahora deberás usar G-90."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Pecsa",
+      "combustible": [
+        {
+          "nombre": "G-Regular",
+          "logo": "RegularPecsa",
+          "precio": 17.81,
+          "descripcion": "Para vehiculos que usan gasolina de 84 y 90."
+        },
+        {
+          "nombre": "G-Premium",
+          "logo": "PremiumPecsa",
+          "precio": 19.20,
+          "descripcion": "Para vehiculos que usan gasolina de 95 y 97."
+        }
+      ]
+    }
+  ],
+  "promos": [
+    {
+      "id": 1,
+      "nombre": "SuperPromo Regular",
+      "img": "Promocion1",
+      "descripcion": "20% de descuento en consumos mayores a S/200 en gasolina regular."
+    } ,
+    {
+      "id": 2,
+      "nombre": "SuperPromo Aceite",
+      "img": "Promocion2",
+      "descripcion": "10% de descuento en cambios de aceite en centros autorizados, aplica terminos y condiciones."
+    },
+    {
+      "id": 3,
+      "nombre": "SuperPromo Papitas",
+      "img": "Promocion3",
+      "descripcion": "Por cada S/.120 en combustibles premium llevate un pack de papitas"
+    }
   ]
 }
