@@ -2,12 +2,16 @@
   <mat-toolbar class="toolbar" color="primary">
     <h1 class="logo">Gas Ya!</h1>
     <div class="mat-spacer"></div>
-    <a mat-button
-      *ngFor="let option of options"
-      [routerLink]="option.path">
-      {{ option.title }}
-    </a>
+    <a mat-button [routerLink]="'/buscarGrifo'">Buscar Grifo</a>
+    <a mat-button [routerLink]="'/perfil'">Perfil</a>
+    <a mat-button [routerLink]="'/grifos'">Grifos</a>
+    <a mat-button [routerLink]="'/faq'">FAQ</a>
+    <a mat-button [routerLink]="'/reportarProblema'">Reportar Problema</a>
+    <a mat-button *ngIf="!isLoggedIn" [routerLink]="'/iniciosesion'">Iniciar Sesión</a>
+    <a mat-button *ngIf="!isLoggedIn" [routerLink]="'/registro'">Registro</a>
+    <a mat-button (click)="cerrarSesion()" *ngIf="isLoggedIn">Cerrar Sesión</a>
   </mat-toolbar>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
 </div>
+
