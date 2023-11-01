@@ -27,69 +27,6 @@
       "apellido": "Brown",
       "correo": "emilybrown@example.com",
       "contrasena": "passabc"
-    },
-    {
-      "id": 5,
-      "nombre": "David",
-      "apellido": "Taylor",
-      "correo": "davidtaylor@example.com",
-      "contrasena": "passdef"
-    },
-    {
-      "id": 6,
-      "nombre": "Sophia",
-      "apellido": "Anderson",
-      "correo": "sophiaanderson@example.com",
-      "contrasena": "passghi"
-    },
-    {
-      "id": 7,
-      "nombre": "Daniel",
-      "apellido": "Wilson",
-      "correo": "danielwilson@example.com",
-      "contrasena": "passjkl"
-    },
-    {
-      "id": 8,
-      "nombre": "Olivia",
-      "apellido": "Martin",
-      "correo": "oliviamartin@example.com",
-      "contrasena": "passmno"
-    },
-    {
-      "id": 9,
-      "nombre": "Matthew",
-      "apellido": "Thompson",
-      "correo": "matthewthompson@example.com",
-      "contrasena": "passpqr"
-    },
-    {
-      "id": 10,
-      "nombre": "Emma",
-      "apellido": "Harris",
-      "correo": "emmaharris@example.com",
-      "contrasena": "passstu"
-    },
-    {
-      "nombre": "Sebas",
-      "apellido": "Cordova",
-      "correo": "eldiyei@gmail.com",
-      "contrasena": "manyao123",
-      "id": 11
-    },
-    {
-      "nombre": "Pepe",
-      "apellido": "Panchrasio",
-      "correo": "ola@gmail.com",
-      "contrasena": "ola123456",
-      "id": 12
-    },
-    {
-      "nombre": "Juan",
-      "apellido": "Caceres",
-      "correo": "jcaceres@gmail.com",
-      "contrasena": "elpepe123",
-      "id": 13
     }
   ],
   "grifos": [
