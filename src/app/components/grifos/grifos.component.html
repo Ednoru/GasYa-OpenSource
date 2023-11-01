@@ -1,5 +1,7 @@
 <div class="container">
+
   <div class="seccion seccion-left">
+    <!--
     <h1 class="titulogrifo">Grifos Asociados</h1>
 
     <div class="boton-container">
@@ -8,7 +10,6 @@
       <button class="btnPrimax" [class.activo]="botonActivo === 'divPrimax'" (click)="mostrar('divPrimax')">Primax</button>
       <button class="btnPecsa" [class.activo]="botonActivo === 'divPecsa'" (click)="mostrar('divPecsa')">Pecsa</button>
     </div>
-
 
     <div class="infogrifo-container">
       <div *ngIf="botonActivo === 'divRepsol'">
@@ -61,7 +62,6 @@
         </div>
       </div>
 
-
       <div *ngIf="botonActivo === 'divPrimax'">
         <div class="Regular">
           <img src="assets/Grifos/RegularPrimax.png" alt="Gasolina Regular">
@@ -110,10 +110,43 @@
         </div>
       </div>
     </div>
+    -->
+
+    <div>
+      <h1 class="titulogrifo">Grifos Asociados</h1>
+
+      <div class="boton-container">
+        <button
+          *ngFor="let grifo of grifos"
+          [class.activo]="botonActivo === grifo.nombre"
+          (click)="mostrar(grifo.nombre)"
+        >
+          {{ grifo.nombre }}
+        </button>
+      </div>
+
+      <div *ngFor="let grifo of grifos" [id]="grifo.nombre" style="display: none;">
+        <h2>{{ grifo.nombre }}</h2>
+        <ul>
+          <li *ngFor="let combustible of grifo.combustible">
+            <img
+              ngSrc="./assets/Grifos/{{ combustible.logo }}.png"
+              alt="{{ combustible.nombre }}"
+              width="215"
+              height="100"
+            >
+            <strong>{{ combustible.nombre }}</strong>
+            <p>Precio: {{ combustible.precio }}</p>
+            <p>{{ combustible.descripcion }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
 
   <div class="seccion seccion-right">
+    <!--
     <h1 class="titulopromociones">Promociones(*)</h1>
     <div class="Promocion">
       <img class="promo1" src="assets/Grifos/Promocion1.png" alt="Promocion 1">
@@ -139,5 +172,19 @@
         <p class="descripcionPromocion">Descripcion: Por cada S/.120 en combustibles premium llevate un pack de papitas</p>
       </div>
     </div>
+    -->
+    <h1 class="titulopromociones">Promociones(*)</h1>
+    <div class="Promocion" *ngFor="let promocion of promociones">
+      <div class="descripcionPromocion">
+        <img
+          ngSrc="./assets/Grifos/{{ promocion.img }}.png"
+          alt="{{ promocion.nombre }}"
+          width="250"
+          height="100"
+        >
+        <p class="nombrePromocion">{{ promocion.nombre }}</p>
+        <p class="descripcionPromocion">{{ promocion.descripcion }}</p>
+      </div>
   </div>
+</div>
 </div>
