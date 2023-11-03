@@ -37,7 +37,7 @@
 
 .divider-line {
   border: 1px solid black; 
-  width: 160%;
+  width: 920%;
   position: absolute; 
   bottom: 0; 
   left: 0; 
@@ -48,7 +48,9 @@
   margin-top: 70px;
   text-align: left;
 }
-
+.uppercase-text {
+  text-transform: uppercase;
+}
 .profile-link {
   display: flex;
   flex-wrap: wrap;
@@ -106,7 +108,7 @@
   text-align: left;
   flex-wrap: wrap;
   justify-content: center;
-  padding:40px;
+  padding:30px;
 }
 .popup-profile-info p {
   font-size: 20px;

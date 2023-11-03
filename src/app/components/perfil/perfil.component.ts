@@ -1,4 +1,5 @@
-import { Component  } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
+import { UserService } from 'src/app/services/userService/user.service';
 
 @Component({
   selector: 'app-perfil',
@@ -6,10 +7,10 @@ import { Component  } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 
-export class PerfilComponent {
+export class PerfilComponent implements OnInit {
 
-  nombreUsuario: string = 'SEBASTIAN CÓRDOVA VALDIVIA';
-  correoElectronico: string = 'sebascordoba123@gmail.com';
+  nombreUsuario: string = '';
+  correoElectronico: string = '';
   nombreEditado: string = '';
   correoEditado: string = '';
   idioma: string = 'ES'; // Código de idioma por defecto
@@ -17,7 +18,19 @@ export class PerfilComponent {
   editandoCorreo: boolean = false;
   editandoIdioma: boolean = false;
   showPopup = false;
-
+  constructor(private userService: UserService) {}
+  ngOnInit(): void {
+    console.log('ngOnInit ejecutado'); // Agrega esta línea
+    const usuarioLogueado = this.userService.getUsuarioLogueado();
+    console.log('Usuario logueado:', usuarioLogueado);
+    if (usuarioLogueado) {
+      this.nombreUsuario = usuarioLogueado.nombre;
+      this.correoElectronico = usuarioLogueado.correo;
+    }
+  }
+  
+  
+  
   showProfilePopup() {
     this.showPopup = !this.showPopup;
   }

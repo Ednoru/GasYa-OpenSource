@@ -34,11 +34,10 @@ export class UserService {
       contrasena: password,
     };
 
-    // Realiza una solicitud POST con los datos de inicio de sesión
+
     return this.http.post<any>(`${this.apiURL}/login`, loginData).pipe(
       map((response) => {
         if (response) {
-          // Si la respuesta del servidor indica que el inicio de sesión es exitoso
           this.isLoggedIn = true;
         }
         return response;
@@ -52,8 +51,6 @@ export class UserService {
     this.usuarioLogueado = usuario;
     this.isLoggedIn = true;
   }
-
-  // Método para obtener la información del usuario logueado
   getUsuarioLogueado() {
     return this.usuarioLogueado;
   }

@@ -2,8 +2,8 @@
   <div class="profile-info">
     <img src="../assets/perfil.jpg" alt="Imagen de perfil" class="profile-image">
     <div class="user-details">
-      <h2><strong>{{ nombreUsuario }}</strong></h2>
-      <p>{{ correoElectronico }}</p>
+      <h2><strong class="uppercase-text">{{ nombreUsuario }}</strong></h2>
+      <p class="uppercase-text">{{ correoElectronico }}</p>
     </div>
     <hr class="divider-line">
   </div>
@@ -38,13 +38,13 @@
         <a><button>Cambiar Foto</button></a>
         <div class="popup-user-details">
           <h3><strong>Nombre</strong></h3>
-          <p *ngIf="!editandoNombre">{{ nombreUsuario }}</p>
+          <p *ngIf="!editandoNombre" class="uppercase-text">{{ nombreUsuario }}</p>
           <input *ngIf="editandoNombre" [(ngModel)]="nombreEditado" type="text">
           <button *ngIf="!editandoNombre" (click)="editarNombre()">Editar</button>
           <button *ngIf="editandoNombre" (click)="guardarNombre()" class="guardar">Guardar</button>
 
           <h3><strong>Correo Electrónico</strong></h3>
-          <p *ngIf="!editandoCorreo">{{ correoElectronico }}</p>
+          <p *ngIf="!editandoCorreo" class="uppercase-text">{{ correoElectronico }}</p>
           <input *ngIf="editandoCorreo" [(ngModel)]="correoEditado" type="text">
           <button *ngIf="!editandoCorreo" (click)="editarCorreo()">Editar</button>
           <button *ngIf="editandoCorreo" (click)="guardarCorreo()" class="save">Guardar</button>
