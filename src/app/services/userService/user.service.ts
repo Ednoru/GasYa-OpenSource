@@ -22,7 +22,12 @@ export class UserService {
       map(users => users.find(user => user.correo === email))
     );
   }
-
+  editarUsuario(usuario: any): Observable<any> {
+    // Aquí hacemos una solicitud HTTP PUT al servidor para actualizar los datos del usuario.
+    // Debes proporcionar la URL correcta y el cuerpo de la solicitud con los nuevos datos.
+    const url = `${this.apiURL}/${usuario.id}`; // Asumiendo que el usuario tiene una propiedad 'id'.
+    return this.http.put<any>(url, usuario);
+  }
   getUserPassword(): Observable<string[]> {
     return this.http.get<any[]>(this.apiURL).pipe(
       map(users => users.map(user => user.contrasena))
@@ -46,6 +51,7 @@ export class UserService {
   }
   cerrarSesion() {
     this.isLoggedIn = false;
+    this.usuarioLogueado = null;
   }
   setUsuarioLogueado(usuario: any) {
     this.usuarioLogueado = usuario;
@@ -54,4 +60,5 @@ export class UserService {
   getUsuarioLogueado() {
     return this.usuarioLogueado;
   }
+
 }

@@ -20,26 +20,20 @@ export class PerfilComponent implements OnInit {
   showPopup = false;
   constructor(private userService: UserService) {}
   ngOnInit(): void {
-    console.log('ngOnInit ejecutado'); // Agrega esta línea
+
     const usuarioLogueado = this.userService.getUsuarioLogueado();
-    console.log('Usuario logueado:', usuarioLogueado);
     if (usuarioLogueado) {
-      this.nombreUsuario = usuarioLogueado.nombre;
+      this.nombreUsuario = usuarioLogueado.nombre + ' ' + usuarioLogueado.apellido;
       this.correoElectronico = usuarioLogueado.correo;
     }
   }
-  
-  
-  
   showProfilePopup() {
     this.showPopup = !this.showPopup;
   }
-  // Método para mostrar u ocultar la vista de edición del idioma
   toggleEditIdioma() {
     this.editandoIdioma = !this.editandoIdioma;
   }
 
-  // Método para guardar el idioma seleccionado
   guardarIdioma() {
     this.editandoIdioma = false;
   }
@@ -47,12 +41,31 @@ export class PerfilComponent implements OnInit {
   guardarNombre() {
     this.nombreUsuario = this.nombreEditado;
     this.editandoNombre = false;
+    
+    const usuarioLogueado = this.userService.getUsuarioLogueado();
+    usuarioLogueado.nombre = this.nombreUsuario;
+    this.userService.editarUsuario(usuarioLogueado).subscribe(response => {
+      if (response) {
+        console.log('Nombre de usuario actualizado en el servidor');
+      } else {
+        console.error('Error al actualizar el nombre de usuario');
+      }
+    });
   }
 
-  // Método para guardar los cambios de correo
   guardarCorreo() {
     this.correoElectronico = this.correoEditado;
     this.editandoCorreo = false;
+    
+    const usuarioLogueado = this.userService.getUsuarioLogueado();
+    usuarioLogueado.correo = this.correoElectronico;
+    this.userService.editarUsuario(usuarioLogueado).subscribe(response => {
+      if (response) {
+        console.log('Correo electrónico actualizado en el servidor');
+      } else {
+        console.error('Error al actualizar el correo electrónico');
+      }
+    });
   }
 
   editarNombre() {
@@ -60,7 +73,6 @@ export class PerfilComponent implements OnInit {
     this.editandoNombre = true;
   }
 
-  // Método para activar la edición del correo
   editarCorreo() {
     this.correoEditado = this.correoElectronico;
     this.editandoCorreo = true;
