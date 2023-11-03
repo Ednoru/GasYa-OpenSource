@@ -7,9 +7,9 @@
     <a mat-button [routerLink]="'/grifos'">Grifos</a>
     <a mat-button [routerLink]="'/faq'">FAQ</a>
     <a mat-button [routerLink]="'/reportarProblema'">Reportar Problema</a>
-    <a mat-button *ngIf="!isLoggedIn" [routerLink]="'/iniciosesion'">Iniciar Sesión</a>
-    <a mat-button *ngIf="!isLoggedIn" [routerLink]="'/registro'">Registro</a>
-    <a mat-button (click)="cerrarSesion()" *ngIf="isLoggedIn">Cerrar Sesión</a>
+    <a mat-button *ngIf="!userService.isLoggedIn" [routerLink]="'/iniciosesion'">Iniciar Sesión</a>
+    <a mat-button *ngIf="!userService.isLoggedIn" [routerLink]="'/registro'">Registro</a>
+    <a mat-button (click)="cerrarSesion()" *ngIf="userService.isLoggedIn">Cerrar Sesión</a>
   </mat-toolbar>
   <router-outlet></router-outlet>
   <app-footer></app-footer>

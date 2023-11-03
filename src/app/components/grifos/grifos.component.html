@@ -129,8 +129,7 @@
         <h2>{{ grifo.nombre }}</h2>
         <ul>
           <li *ngFor="let combustible of grifo.combustible">
-            <img
-              ngSrc="./assets/Grifos/{{ combustible.logo }}.png"
+            <img [src]="'./assets/Grifos/' + combustible.logo + '.png'"
               alt="{{ combustible.nombre }}"
               width="215"
               height="100"
@@ -176,8 +175,7 @@
     <h1 class="titulopromociones">Promociones(*)</h1>
     <div class="Promocion" *ngFor="let promocion of promociones">
       <div class="descripcionPromocion">
-        <img
-          ngSrc="./assets/Grifos/{{ promocion.img }}.png"
+        <img [src]="'./assets/Grifos/' + promocion.img + '.png'"
           alt="{{ promocion.nombre }}"
           width="250"
           height="100"

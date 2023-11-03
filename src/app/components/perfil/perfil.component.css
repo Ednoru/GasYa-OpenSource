@@ -95,10 +95,10 @@
 }
 .profile-popup {
   width: 55%;
-  height: 80%;
+  height: 65%;
   position: absolute;
   left: 40%;
-  top: 38%;
+  top: 30%;
   background-color: #edebeb;
   border-radius: 20px;
 }

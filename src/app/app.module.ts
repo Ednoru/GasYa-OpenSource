@@ -23,6 +23,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { FooterComponent } from './public/footer/footer.component';
+import { UserService } from './services/userService/user.service';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -56,7 +57,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
