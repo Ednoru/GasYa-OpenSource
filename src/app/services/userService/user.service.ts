@@ -23,9 +23,7 @@ export class UserService {
     );
   }
   editarUsuario(usuario: any): Observable<any> {
-    // Aquí hacemos una solicitud HTTP PUT al servidor para actualizar los datos del usuario.
-    // Debes proporcionar la URL correcta y el cuerpo de la solicitud con los nuevos datos.
-    const url = `${this.apiURL}/${usuario.id}`; // Asumiendo que el usuario tiene una propiedad 'id'.
+    const url = `${this.apiURL}/${usuario.id}`; 
     return this.http.put<any>(url, usuario);
   }
   getUserPassword(): Observable<string[]> {
