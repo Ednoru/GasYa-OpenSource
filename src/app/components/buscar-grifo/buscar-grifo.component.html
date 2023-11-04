@@ -1,9 +1,11 @@
 <div class="grid-container">
   <section id="formfilter">
-    <form action="">
+    <form (ngSubmit)="searchNearbyGasStation()">
       <input
         type="text"
         placeholder="Search..."
+        name="searchQuery"
+        [(ngModel)]="searchQuery"
       />
       <button class="submit-button" type="submit">
         Buscar
