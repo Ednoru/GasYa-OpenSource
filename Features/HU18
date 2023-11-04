@@ -1,0 +1,4 @@
+Como usuario, quiero tener la opción de cerra mi sesión para cuando deje de usar la app.
+
+When el cliente ya no quiera seguir usando la app, podra darle click al botón de cerrar sesión
+Then la sesion del usuario se cerrará y regresará a la página de inicio de sesión
