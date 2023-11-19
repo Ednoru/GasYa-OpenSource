@@ -17,6 +17,7 @@ export class PerfilComponent implements OnInit {
   editandoNombre: boolean = false;
   editandoCorreo: boolean = false;
   editandoIdioma: boolean = false;
+  fotoPerfil: string='';
   showPopup = false;
   constructor(private userService: UserService) {}
   ngOnInit(): void {
@@ -25,6 +26,7 @@ export class PerfilComponent implements OnInit {
     if (usuarioLogueado) {
       this.nombreUsuario = usuarioLogueado.nombre + ' ' + usuarioLogueado.apellido;
       this.correoElectronico = usuarioLogueado.correo;
+      this.fotoPerfil=usuarioLogueado.perfil;
     }
   }
   showProfilePopup() {

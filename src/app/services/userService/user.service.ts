@@ -9,6 +9,7 @@ import {map, Observable} from "rxjs";
 
 export class UserService {
   private apiURL = 'https://my-json-server.typicode.com/Ednoru/GasYa-OpenSource/usuarios';
+  //private apiURL = 'http://localhost:3000/usuarios';
   isLoggedIn: boolean = false;
   usuarioLogueado: any;
   constructor(private http: HttpClient) { }
