@@ -61,6 +61,7 @@ declare global {
   templateUrl: './buscar-grifo.component.html',
   styleUrls: ['./buscar-grifo.component.css']
 })
+
 export class BuscarGrifoComponent implements AfterViewInit {
   map: google.maps.Map;
   // @ts-ignore
