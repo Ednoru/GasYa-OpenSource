@@ -2,11 +2,11 @@
   <mat-toolbar class="toolbar" color="primary">
     <h1 class="logo">Gas Ya!</h1>
     <div class="mat-spacer"></div>
-    <a mat-button [routerLink]="'/buscarGrifo'">Buscar Grifo</a>
-    <a mat-button [routerLink]="'/perfil'">Perfil</a>
-    <a mat-button [routerLink]="'/grifos'">Grifos</a>
-    <a mat-button [routerLink]="'/faq'">FAQ</a>
-    <a mat-button [routerLink]="'/reportarProblema'">Reportar Problema</a>
+    <a mat-button *ngIf="userService.isLoggedIn" [routerLink]="'/buscarGrifo'">Buscar Grifo</a>
+    <a mat-button *ngIf="userService.isLoggedIn" [routerLink]="'/perfil'">Perfil</a>
+    <a mat-button *ngIf="userService.isLoggedIn" [routerLink]="'/grifos'">Grifos</a>
+    <a mat-button *ngIf="userService.isLoggedIn" [routerLink]="'/faq'">FAQ</a>
+    <a mat-button *ngIf="userService.isLoggedIn" [routerLink]="'/reportarProblema'">Reportar Problema</a>
     <a mat-button *ngIf="!userService.isLoggedIn" [routerLink]="'/iniciosesion'">Iniciar Sesión</a>
     <a mat-button *ngIf="!userService.isLoggedIn" [routerLink]="'/registro'">Registro</a>
     <a mat-button (click)="cerrarSesion()" *ngIf="userService.isLoggedIn">Cerrar Sesión</a>
