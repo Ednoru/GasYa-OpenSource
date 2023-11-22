@@ -26,8 +26,8 @@ import {GrifosPromosService} from "../../services/GrifosPromosService/grifos-pro
 })
 export class GrifosComponent implements OnInit {
   botonActivo: string | null = null;
-  grifos: string[] = [];
-  promociones: { nombre: string, descripcion: string }[] = [];
+  grifos: any[] = [];
+  promociones: any[] = [];
 
   constructor(private grifosService: GrifosPromosService) { }
 
@@ -38,14 +38,13 @@ export class GrifosComponent implements OnInit {
 
   async loadGrifos(): Promise<void> {
     try {
-      this.grifosService.getGrifos().subscribe(
-        (data: string[]) => {
+      this.grifosService.getGrifos().subscribe((data: any) => {
+        if (Array.isArray(data)) {
           this.grifos = data;
-        },
-        (error: any) => {
-          console.error("Error al cargar grifos:", error);
+        } else {
+          console.error("El servicio no devolvió una matriz.");
         }
-      );
+      });
     } catch (error) {
       console.error(error);
     }
@@ -53,14 +52,13 @@ export class GrifosComponent implements OnInit {
 
   async loadPromociones(): Promise<void> {
     try {
-      this.grifosService.getPromos().subscribe(
-        (data: { nombre: string, descripcion: string }[]) => {
+      this.grifosService.getPromos().subscribe((data: any) => {
+        if (Array.isArray(data)) {
           this.promociones = data;
-        },
-        (error: any) => {
-          console.error("Error al cargar promociones:", error);
+        } else {
+          console.error("El servicio no devolvió una matriz.");
         }
-      );
+      });
     } catch (error) {
       console.error(error);
     }
