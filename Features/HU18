@@ -1,0 +1,7 @@
+Como cliente, quiero poder tener un icono de perfil, 
+para tener un visual de mi cuenta
+
+Given el usuario se encuentra en la seccion Mi Cuenta
+When el Usuario le da click al boton cambiar foto, ingrese su foto
+and le da click a confirmar
+Then se le mostrara la foto en el apartado Mi Cuenta
