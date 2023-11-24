@@ -1,0 +1,6 @@
+Como administrador, quiero que los datos de grifos, promociones y combustibles sean llamados por medio de una RESTful API, 
+para tener una mejor gestion de informacion
+
+Given el administrador se encuentra en la seccion Grifos
+When el administrador le da click a los botones de grifos
+Then tiene una visualizacion de la informacion respectiva a cada cadena de grifos y sus combustibles
