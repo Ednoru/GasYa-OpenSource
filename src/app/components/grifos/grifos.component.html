@@ -54,11 +54,11 @@
   <div class="seccion seccion-left">
     <h1 class="titulogrifo">Grifos Asociados</h1>
 
+    /*observacion*/
     <div class="boton-container">
       <button
         *ngFor="let grifo of grifos"
         [class.activo]="botonActivo === grifo.name"
-        <!--observacion-->
         (click)="mostrar(grifo.name, grifo.id); loadCombustiblesPorGrifo(grifo.id)"
       >
         {{ grifo.name }}
