@@ -20,6 +20,7 @@ export interface Fuels {
   type: string;
   description: string;
   price: number;
+  logo: string;
 }
 
 @Injectable({
@@ -41,13 +42,14 @@ export class GrifosPromosService {
   }
 
   //observacion
-  getCombustiblesPorGrifo(grifoId: number): Observable<Fuels[]> {
-    try {
-      return this.http.get<Fuels[]>(`${this.apiUrl}/fuels?gasStationId=${grifoId}`);
-    } catch (error) {
-      console.error('Error fetching fuels', error);
-      throw error;
-    }
+  getCombustiblesByGrifoId(grifoId: number): Observable<Fuels[]> {
+    // Modificar la URL para pasar los dos IDs como parámetros de consulta
+    const startId = (grifoId - 1) * 2 + 1;
+    const endId = startId + 1;
+
+    return this.http.get<Fuels[]>(`${this.apiUrl}/fuels?startId=${startId}&endId=${endId}`).pipe(
+      catchError(this.handleError)
+    );
   }
 
   private handleError(error: any): Observable<any> {

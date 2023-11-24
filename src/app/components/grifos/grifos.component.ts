@@ -45,22 +45,18 @@ export class GrifosComponent implements OnInit{
     }
   }
 
-  //obeservacion
-  async loadCombustiblesPorGrifo(grifoId: number): Promise<void> {
-    try {
-      this.grifosService.getCombustiblesPorGrifo(grifoId).subscribe((data: Fuels[]) => {
-        this.combustibles = data;
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  }
 
   //observacion
   async mostrar(nombreGrifo: string, grifoId: number): Promise<void> {
     try {
-      await this.loadCombustiblesPorGrifo(grifoId);
       this.botonActivo = nombreGrifo;
+
+      // Llamada a la nueva función del servicio para obtener los combustibles según el grifo seleccionado
+      this.grifosService.getCombustiblesByGrifoId(grifoId).subscribe((data: Fuels[]) => {
+        const startId = (grifoId - 1) * 2 + 1;
+        const endId = startId + 1;
+        this.combustibles = data.filter(combustible => combustible.id >= startId && combustible.id <= endId);
+      });
     } catch (error) {
       console.error(error);
     }
