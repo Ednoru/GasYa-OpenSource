@@ -45,6 +45,7 @@ export class GrifosComponent implements OnInit{
     }
   }
 
+  //obeservacion
   async loadCombustiblesPorGrifo(grifoId: number): Promise<void> {
     try {
       this.grifosService.getCombustiblesPorGrifo(grifoId).subscribe((data: Fuels[]) => {
@@ -55,6 +56,7 @@ export class GrifosComponent implements OnInit{
     }
   }
 
+  //observacion
   async mostrar(nombreGrifo: string, grifoId: number): Promise<void> {
     try {
       await this.loadCombustiblesPorGrifo(grifoId);

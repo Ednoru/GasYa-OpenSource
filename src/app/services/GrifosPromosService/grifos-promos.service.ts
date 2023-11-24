@@ -39,6 +39,7 @@ export class GrifosPromosService {
     );
   }
 
+  //observacion
   getCombustiblesPorGrifo(grifoId: number): Observable<Fuels[]> {
     try {
       return this.http.get<Fuels[]>(`${this.apiUrl}/fuels?gasStationId=${grifoId}`);

@@ -58,6 +58,7 @@
       <button
         *ngFor="let grifo of grifos"
         [class.activo]="botonActivo === grifo.name"
+        <!--observacion-->
         (click)="mostrar(grifo.name, grifo.id); loadCombustiblesPorGrifo(grifo.id)"
       >
         {{ grifo.name }}
