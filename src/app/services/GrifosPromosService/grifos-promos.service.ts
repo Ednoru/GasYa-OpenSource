@@ -12,6 +12,7 @@ export interface Promotion {
   id: number;
   title: string;
   description: string;
+  img: string;
 }
 
 export interface Fuels {

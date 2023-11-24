@@ -89,14 +89,14 @@
     <h1 class="titulopromociones">Promociones(*)</h1>
     <div class="Promocion" *ngFor="let promocion of promociones">
       <div class="descripcionPromocion">
-        <!--
+
         <img
           [src]="'./assets/Grifos/' + promocion.img + '.png'"
-          alt="{{ promocion.name }}"
+          alt="{{ promocion.title }}"
           width="250"
           height="100"
         />
-        -->
+
         <p class="nombrePromocion">{{ promocion.title }}</p>
         <p class="descripcionPromocion">{{ promocion.description }}</p>
       </div>
