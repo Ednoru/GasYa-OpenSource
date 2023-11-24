@@ -39,10 +39,9 @@ export class GrifosPromosService {
     );
   }
 
-  async getCombustiblesPorGrifo(grifoId: number): Promise<Fuels[]> {
+  getCombustiblesPorGrifo(grifoId: number): Observable<Fuels[]> {
     try {
-      const data = await this.http.get<Fuels[]>(`${this.apiUrl}/fuels?gasStationId=${grifoId}`).toPromise();
-      return data || []; // Si data es undefined, devolvemos un array vacío
+      return this.http.get<Fuels[]>(`${this.apiUrl}/fuels?gasStationId=${grifoId}`);
     } catch (error) {
       console.error('Error fetching fuels', error);
       throw error;
